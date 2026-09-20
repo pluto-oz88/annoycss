@@ -1,0 +1,84 @@
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* general styling */
+:root {
+  --clr-orange: 7 100% 63%;
+  --clr-blue: 239 100% 50%;
+
+  --spacer: 2rem;
+}
+
+html {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: var(--spacer);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  line-height: 1.1;
+  color: hsl(var(--clr-orange));
+  text-shadow: 0.05em 0.05em 0 hsl(0 0% 0% / 0.7);
+  text-align: center;
+}
+
+section {
+  padding: 1rem;
+  box-shadow: 0 0 2rem hsl(0 0% 0% / 0.12);
+  resize: horizontal;
+  overflow-x: auto;
+  margin-block: 1rem;
+  border-radius: 12px;
+}
+
+section > * + * {
+  margin-block-start: 1em;
+}
+
+.button-group {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  /* for demo */
+  max-width: 600px;
+}
+
+.button-group > * {
+  flex: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
